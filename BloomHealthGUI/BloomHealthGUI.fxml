@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane id="MainPage" fx:id="MainPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="990.0" prefWidth="1500.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.BloomHealthGUI">
+   <children>
+      <Group layoutX="-1.0" layoutY="480.0" />
+      <Group />
+      <Pane layoutX="14.0" layoutY="135.0" prefHeight="399.0" prefWidth="415.0">
+         <children>
+            <fx:include source="ExpireTable.fxml" />
+         </children>
+      </Pane>
+      <Pane layoutX="14.0" layoutY="665.0" prefHeight="293.0" prefWidth="443.0">
+         <children>
+            <fx:include source="BirthdayTable.fxml" />
+         </children>
+      </Pane>
+      <Pane layoutX="465.0" layoutY="108.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <fx:include source="SignInMenu.fxml" />
+         </children>
+      </Pane>
+      <Pane layoutX="466.0" layoutY="665.0" prefHeight="168.0" prefWidth="200.0">
+         <children>
+            <fx:include source="EventPlanner.fxml" />
+         </children>
+      </Pane>
+      <Pane layoutX="1108.0" layoutY="108.0" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <fx:include source="MarketPlace.fxml" />
+         </children>
+      </Pane>
+      <Label layoutX="339.0" layoutY="82.0" text="Expired" textFill="#ff0606">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="83.0" layoutY="620.0" text="HAPPY BIRTHDAY!!">
+         <textFill>
+            <LinearGradient cycleMethod="REPEAT" endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="#f50202" />
+                  <Stop color="#16f502" offset="0.5184331797235022" />
+                  <Stop color="#360bf5" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font size="36.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="logo" fitHeight="75.0" fitWidth="135.0" layoutX="710.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@BloomHealth.PNG" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5486b5" height="61.0" layoutX="16.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="694.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#5486b5" height="61.0" layoutX="785.0" layoutY="24.0" stroke="BLACK" strokeType="INSIDE" width="694.0" />
+      <Pane layoutX="16.0" layoutY="28.0" prefHeight="61.0" prefWidth="493.0">
+         <children>
+            <fx:include source="DayPass.fxml" />
+         </children>
+      </Pane>
+      <Label layoutX="873.0" layoutY="28.0" text="BLOOM HEALTH &amp; FITNESS">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="82.0" text="Soon To Expire" textFill="#030303">
+         <font>
+            <Font name="Century Schoolbook Bold" size="36.0" />
+         </font>
+      </Label>
+      <Button layoutX="556.0" layoutY="29.0" mnemonicParsing="false" onAction="#reConnect" text="ReConnect" />
+   </children>
+</Pane>

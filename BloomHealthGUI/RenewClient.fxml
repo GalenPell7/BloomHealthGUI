@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="474.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.RenewClient">
+   <children>
+      <TextField fx:id="planField" layoutX="64.0" layoutY="114.0" prefHeight="51.0" prefWidth="87.0" />
+      <RadioButton fx:id="weeks" layoutX="155.0" layoutY="97.0" mnemonicParsing="false" text="Week(s)" />
+      <RadioButton fx:id="months" layoutX="155.0" layoutY="139.0" mnemonicParsing="false" text="Month(s)" />
+      <TextField fx:id="priceField" layoutX="334.0" layoutY="114.0" prefHeight="51.0" prefWidth="107.0" />
+      <TextField fx:id="sessionAmountField" layoutX="64.0" layoutY="237.0" prefHeight="51.0" prefWidth="87.0" text="0" />
+      <TextField fx:id="sessionPriceField" layoutX="334.0" layoutY="237.0" prefHeight="51.0" prefWidth="87.0" text="0" />
+      <TextField fx:id="trainerField" layoutX="65.0" layoutY="348.0" prefHeight="51.0" prefWidth="87.0" text="None" />
+      <Label layoutX="62.0" layoutY="80.0" text="Plan:" />
+      <Label layoutX="65.0" layoutY="313.0" text="Trainer:" />
+      <Label layoutX="62.0" layoutY="202.0" text="Session Amount:" />
+      <Label layoutX="334.0" layoutY="202.0" text="Session Price:" />
+      <Label layoutX="334.0" layoutY="80.0" text="Price:" />
+      <Button layoutX="326.0" layoutY="348.0" mnemonicParsing="false" text="Renew" />
+      <Button layoutX="451.0" layoutY="348.0" mnemonicParsing="false" text="Cancel" />
+   </children>
+</Pane>

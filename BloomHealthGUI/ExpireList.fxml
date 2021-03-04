@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.24436090225563908" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.ExpireList">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="listOfExpires" layoutX="308.0" layoutY="286.0" prefHeight="353.0" prefWidth="798.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="firstName" prefWidth="140.0" text="FirstName" />
+                <TableColumn fx:id="lastName" prefWidth="145.0" text="LastName" />
+                  <TableColumn fx:id="phoneNumber" prefWidth="185.0" text="PhoneNumber" />
+                  <TableColumn fx:id="birthday" prefWidth="163.0" text="Birthday" />
+                  <TableColumn fx:id="dateExpired" prefWidth="164.0" text="ExpireDate" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="443.0" prefWidth="798.0">
+         <children>
+            <Button layoutX="30.0" layoutY="18.0" mnemonicParsing="false" onAction="#clearList" text="Clear List" />
+            <Button layoutX="490.0" layoutY="496.0" mnemonicParsing="false" onAction="#addClient" text="Add To Active Clients" />
+            <TextField fx:id="planField" layoutX="490.0" layoutY="49.0" prefHeight="51.0" prefWidth="62.0" />
+            <Label layoutX="490.0" layoutY="14.0" text="Plan:" />
+            <RadioButton fx:id="weeks" layoutX="555.0" layoutY="32.0" mnemonicParsing="false" text="Week(s)" />
+            <RadioButton fx:id="months" layoutX="555.0" layoutY="70.0" mnemonicParsing="false" text="Month(s)" />
+            <Label layoutX="487.0" layoutY="124.0" text="Price:" />
+            <TextField fx:id="priceField" layoutX="487.0" layoutY="159.0" prefHeight="51.0" prefWidth="93.0" />
+            <CheckBox fx:id="silverSneaker" layoutX="490.0" layoutY="226.0" mnemonicParsing="false" text="Silver Sneakers" />
+            <CheckBox fx:id="noSessions" layoutX="490.0" layoutY="268.0" mnemonicParsing="false" text="No Sessions" />
+            <Label layoutX="408.0" layoutY="314.0" text="Session Amount:" />
+            <TextField fx:id="sessionAmountField" layoutX="498.0" layoutY="308.0" prefHeight="51.0" prefWidth="93.0" />
+            <Label layoutX="408.0" layoutY="369.0" text="Session Price:" />
+            <TextField fx:id="sessionPriceField" layoutX="498.0" layoutY="363.0" prefHeight="51.0" prefWidth="93.0" />
+            <Label layoutX="408.0" layoutY="427.0" text="Trainer:" />
+            <TextField fx:id="trainerField" layoutX="498.0" layoutY="419.0" prefHeight="51.0" prefWidth="93.0" />
+            <Label layoutX="604.0" layoutY="371.0" text="USE DECIMAL" />
+            <Label layoutX="604.0" layoutY="167.0" text="USE DECIMAL" />
+            <Label layoutX="333.0" layoutY="369.0" text="*" />
+            <Label layoutX="468.0" layoutY="150.0" text="*" />
+            <RadioButton fx:id="weekly" layoutX="30.0" layoutY="346.0" mnemonicParsing="false" text="Weekly" />
+            <RadioButton fx:id="monthly" layoutX="30.0" layoutY="387.0" mnemonicParsing="false" text="Monthly" />
+            <RadioButton fx:id="paidInFull" layoutX="30.0" layoutY="427.0" mnemonicParsing="false" text="Paid In Full" />
+            <Label layoutX="12.0" layoutY="314.0" text="Session Payment Options:" />
+            <Label fx:id="label" alignment="TOP_LEFT" layoutX="30.0" layoutY="83.0" prefHeight="201.0" prefWidth="417.0" />
+            <TextField fx:id="filteredSearch" layoutX="176.0" layoutY="18.0" />
+            <CheckBox fx:id="autoRenew" layoutX="555.0" layoutY="107.0" mnemonicParsing="false" text="Auto-Renew" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

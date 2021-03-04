@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.7722063037249284" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="700.0" prefWidth="704.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.EventList">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="eventTable" layoutX="186.0" layoutY="191.0" prefHeight="681.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="title" prefWidth="75.0" text="Title " />
+                <TableColumn fx:id="trainer" prefWidth="120.0" text="Trainer" />
+                  <TableColumn fx:id="days" prefWidth="123.0" text="Days" />
+                  <TableColumn fx:id="startTime" prefWidth="129.0" text="StartTime" />
+                  <TableColumn fx:id="endTime" prefWidth="118.0" text="EndTime" />
+                  <TableColumn fx:id="size" prefWidth="62.0" text="Size" />
+                  <TableColumn fx:id="date" prefWidth="74.0" text="Date" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Button layoutX="194.0" layoutY="14.0" mnemonicParsing="false" onAction="addPeople" text="Add" />
+            <Button layoutX="283.0" layoutY="14.0" mnemonicParsing="false" onAction="#deletePeople" text="Delete" />
+            <Button layoutX="419.0" layoutY="14.0" mnemonicParsing="false" onAction="#deleteEvent" text="Delete Event" />
+            <TextField fx:id="amount" layoutX="28.0" layoutY="14.0" prefHeight="51.0" prefWidth="155.0" />
+            <Button layoutX="419.0" layoutY="77.0" mnemonicParsing="false" onAction="#refresh" prefHeight="51.0" prefWidth="165.0" text="Refresh" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

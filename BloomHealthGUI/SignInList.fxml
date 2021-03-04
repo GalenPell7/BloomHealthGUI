@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.610410094637224" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="636.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.SignInList">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="signInList" layoutX="241.0" layoutY="119.0" prefHeight="575.0" prefWidth="598.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="firstNames" prefWidth="144.0" text="FirstName" />
+                <TableColumn fx:id="lastNames" prefWidth="145.0" text="LastName" />
+                  <TableColumn fx:id="date" prefWidth="175.0" text="Date" />
+                  <TableColumn fx:id="time" prefWidth="133.0" text="Time" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="93.0" prefWidth="598.0">
+         <children>
+            <Button layoutX="14.0" layoutY="-2.0" mnemonicParsing="false" onAction="#clearList" text="Clear List" />
+            <TextField fx:id="filteredSearch" layoutX="286.0" layoutY="-2.0" />
+            <Label fx:id="label" layoutX="456.0" layoutY="58.0" prefHeight="35.0" prefWidth="128.0" />
+            <Button layoutX="286.0" layoutY="58.0" mnemonicParsing="false" onAction="#attendanceCount" text="Get Count" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

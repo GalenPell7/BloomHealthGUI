@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="559.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.SignInMenu">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffc80073" height="559.0" layoutX="1.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" width="630.0" />
+      <Group layoutX="-1.0" layoutY="-45.0">
+         <children>
+            <TableView fx:id="clientList" layoutX="10.0" layoutY="345.0" prefHeight="252.0" prefWidth="612.0">
+              <columns>
+                <TableColumn fx:id="firstNames" prefWidth="88.0" text="FirstName" />
+                <TableColumn fx:id="lastNames" prefWidth="102.0" text="LastName" />
+                  <TableColumn fx:id="phoneNumbers" prefWidth="86.0" text="PhoneNumber" />
+                  <TableColumn fx:id="birthdays" prefWidth="109.0" text="Birthday" />
+                  <TableColumn fx:id="startDates" prefWidth="119.0" text="StartDate" />
+                  <TableColumn fx:id="endDates" prefWidth="107.0" text="EndDate" />
+              </columns>
+            </TableView>
+            <TextField fx:id="filteredSearch" layoutX="10.0" layoutY="293.0" prefHeight="52.0" prefWidth="225.0" />
+            <Button layoutX="338.0" layoutY="305.0" mnemonicParsing="false" onAction="#signIn" text="sign in">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="433.0" layoutY="305.0" mnemonicParsing="false" onAction="#freezeAccount" text="Freeze">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="524.0" layoutY="305.0" mnemonicParsing="false" onAction="#setDelete" text="Delete">
+               <font>
+                  <Font name="Century Schoolbook Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="243.0" layoutY="306.0" mnemonicParsing="false" onAction="#clientInfo" prefHeight="35.0" prefWidth="86.0" text="Client Info">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </Group>
+      <Label layoutX="11.0" layoutY="225.0" text="Find Member:">
+         <font>
+            <Font name="Century Schoolbook" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f4f4f5" height="171.0" layoutX="284.0" layoutY="25.0" stroke="BLACK" strokeType="INSIDE" width="326.0" />
+      <Label fx:id="label" layoutX="284.0" layoutY="25.0" prefHeight="171.0" prefWidth="326.0" text="Important Client Info:" textFill="#f50707">
+         <font>
+            <Font size="18.0" />
+         </font></Label>
+      <Button layoutX="24.0" layoutY="38.0" mnemonicParsing="false" onAction="#showInventory" prefHeight="35.0" prefWidth="106.0" text="Inventory">
+         <font>
+            <Font name="Century Schoolbook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="80.0" mnemonicParsing="false" onAction="#showAttendance" prefHeight="35.0" prefWidth="106.0" text="Attendance">
+         <font>
+            <Font name="Century Schoolbook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="125.0" mnemonicParsing="false" onAction="#showFreezeList" prefHeight="35.0" prefWidth="106.0" text="Freeze List">
+         <font>
+            <Font name="Century Schoolbook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="24.0" layoutY="171.0" mnemonicParsing="false" onAction="#showFinancialList" prefHeight="35.0" prefWidth="106.0" text="Financials">
+         <font>
+            <Font name="Century Schoolbook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="165.0" layoutY="171.0" mnemonicParsing="false" onAction="#refresh" prefHeight="35.0" prefWidth="106.0" text="Refresh">
+         <font>
+            <Font name="Century Schoolbook Bold Italic" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="165.0" layoutY="38.0" mnemonicParsing="false" onAction="#addClientMenu" prefHeight="35.0" prefWidth="106.0" text="Add Client">
+         <font>
+            <Font name="Century Schoolbook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="165.0" layoutY="80.0" mnemonicParsing="false" onAction="#addSessions" prefHeight="35.0" prefWidth="106.0" text="Add Sessions">
+         <font>
+            <Font name="Century Schoolbook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="165.0" layoutY="125.0" mnemonicParsing="false" onAction="#showExpiredList" prefHeight="35.0" prefWidth="106.0" text="Expired List">
+         <font>
+            <Font name="Century Schoolbook" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="365.0" layoutY="196.0" mnemonicParsing="false" onAction="#changeTrainer" prefHeight="30.0" prefWidth="118.0" text="Change Trainer">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="492.0" layoutY="196.0" mnemonicParsing="false" onAction="#makeSsMember" prefHeight="30.0" prefWidth="118.0" text="Silver Sneakers">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="284.0" layoutY="196.0" mnemonicParsing="false" onAction="#updateSSID" prefHeight="30.0" prefWidth="69.0" text="SSID">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="238.0" layoutY="228.0" mnemonicParsing="false" onAction="#changeID" prefHeight="30.0" prefWidth="133.0" text="Change ClientID">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="372.0" layoutY="228.0" mnemonicParsing="false" onAction="#changeBirthday" prefHeight="30.0" prefWidth="118.0" text="Change Birthday">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="492.0" layoutY="228.0" mnemonicParsing="false" onAction="#changeNumber" prefHeight="30.0" prefWidth="133.0" text="Change Number">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

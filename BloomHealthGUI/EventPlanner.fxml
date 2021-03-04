@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="287.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.EventPlanner">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#f5d76ce0" height="287.0" stroke="BLACK" strokeType="INSIDE" width="630.0" />
+      <TextField fx:id="titleField" layoutX="14.0" layoutY="43.0" prefHeight="20.0" prefWidth="297.0" />
+      <Label layoutX="14.0" layoutY="16.0" text="Title:" />
+      <TextField fx:id="trainerField" layoutX="431.0" layoutY="34.0" prefHeight="20.0" prefWidth="184.0" />
+      <Label layoutX="431.0" layoutY="8.0" text="Trainer:" />
+      <CheckBox fx:id="tuesday" layoutX="18.0" layoutY="120.0" mnemonicParsing="false" text="Tuesday" />
+      <CheckBox fx:id="monday" layoutX="18.0" layoutY="95.0" mnemonicParsing="false" text="Monday" />
+      <CheckBox fx:id="wednesday" layoutX="18.0" layoutY="145.0" mnemonicParsing="false" text="Wednesday" />
+      <CheckBox fx:id="thursday" layoutX="18.0" layoutY="170.0" mnemonicParsing="false" text="Thursday" />
+      <CheckBox fx:id="friday" layoutX="18.0" layoutY="195.0" mnemonicParsing="false" text="Friday" />
+      <CheckBox fx:id="saturday" layoutX="18.0" layoutY="220.0" mnemonicParsing="false" text="Saturday" />
+      <CheckBox fx:id="sunday" layoutX="18.0" layoutY="245.0" mnemonicParsing="false" text="Sunday" />
+      <TextField fx:id="startTime" layoutX="193.0" layoutY="138.0" prefHeight="20.0" prefWidth="120.0" />
+      <Label layoutX="192.0" layoutY="109.0" text="StartTime:" />
+      <Label layoutX="193.0" layoutY="182.0" text="EndTime:" />
+      <TextField fx:id="endTime" layoutX="193.0" layoutY="210.0" prefHeight="20.0" prefWidth="120.0" />
+      <Button layoutX="439.0" layoutY="164.0" mnemonicParsing="false" onAction="#sendToEvents" prefHeight="51.0" prefWidth="125.0" text="Accept" />
+      <Label layoutX="431.0" layoutY="81.0" text="Date:" />
+      <TextField fx:id="date" layoutX="431.0" layoutY="106.0" prefHeight="20.0" prefWidth="120.0" />
+      <Button layoutX="439.0" layoutY="220.0" mnemonicParsing="false" onAction="#showEvents" prefHeight="51.0" prefWidth="125.0" text="EventList" />
+      <Label layoutX="210.0" layoutY="6.0" text="Event Planner">
+         <font>
+            <Font name="Century Schoolbook Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

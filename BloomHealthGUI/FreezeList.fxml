@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="710.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.FreezeList">
+   <children>
+      <TableView fx:id="freezeList" prefHeight="689.0" prefWidth="600.0">
+        <columns>
+          <TableColumn fx:id="firstNames" prefWidth="115.0" text="FirstName" />
+          <TableColumn fx:id="lastNames" prefWidth="120.0" text="LastName" />
+            <TableColumn fx:id="phoneNumbers" prefWidth="120.0" text="PhoneNumber" />
+            <TableColumn fx:id="birthdays" prefWidth="124.0" text="Birthday" />
+            <TableColumn fx:id="daysLeft" prefWidth="120.0" text="DaysLeft" />
+        </columns>
+      </TableView>
+      <Pane prefHeight="139.0" prefWidth="600.0">
+         <children>
+            <Button layoutX="93.0" layoutY="15.0" mnemonicParsing="false" onAction="#unFreeze" text="Unfreeze" />
+            <Button layoutX="382.0" layoutY="15.0" mnemonicParsing="false" onAction="#setDelete" text="Delete" />
+         </children>
+      </Pane>
+   </children>
+</VBox>

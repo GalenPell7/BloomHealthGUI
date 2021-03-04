@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+<SplitPane dividerPositions="0.9914040114613181" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.Inventory">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="798.0" prefWidth="671.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232425" height="5.0" layoutY="120.0" stroke="BLACK" strokeType="INSIDE" width="700.0" />
+            <TextField fx:id="filteredSearch" layoutX="25.0" layoutY="46.0" />
+            <Label layoutX="25.0" layoutY="14.0" text="Search Inventory:" />
+            <Button layoutX="355.0" layoutY="46.0" mnemonicParsing="false" onAction="#setDelete" text="Delete Selected Item" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232425" height="678.0" layoutX="342.0" layoutY="125.0" stroke="BLACK" strokeType="INSIDE" width="3.0" />
+            <Label layoutX="15.0" layoutY="181.0" text="Name:" />
+            <TextField fx:id="nameField" layoutX="17.0" layoutY="216.0" prefHeight="51.0" prefWidth="251.0" />
+            <Label layoutX="15.0" layoutY="274.0" text="Type:" />
+            <ChoiceBox fx:id="types" layoutX="17.0" layoutY="309.0" prefHeight="51.0" prefWidth="251.0" />
+            <TextField fx:id="priceField" layoutX="17.0" layoutY="407.0" prefHeight="51.0" prefWidth="155.0" />
+            <Label layoutX="15.0" layoutY="372.0" text="Price:" />
+            <Label layoutX="15.0" layoutY="464.0" text="Amount:" />
+            <TextField fx:id="amountField" layoutX="17.0" layoutY="499.0" prefHeight="51.0" prefWidth="91.0" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232425" height="5.0" layoutX="-2.0" layoutY="616.0" stroke="BLACK" strokeType="INSIDE" width="349.0" />
+            <Label layoutX="138.0" layoutY="125.0" text="Add Item:" />
+            <Button fx:id="button" layoutX="174.0" layoutY="499.0" mnemonicParsing="false" onAction="#addItem" prefHeight="51.0" prefWidth="115.0" text="Add" />
+            <Button layoutX="117.0" layoutY="677.0" mnemonicParsing="false" onAction="#refresh" prefHeight="51.0" prefWidth="115.0" text="Refresh" />
+            <Label alignment="TOP_LEFT" layoutX="350.0" layoutY="160.0" prefHeight="51.0" prefWidth="333.0" text="&gt;Enter Size w/ name (if needed)     " />
+            <Label alignment="TOP_LEFT" layoutX="350.0" layoutY="223.0" prefHeight="51.0" prefWidth="333.0" text="&gt;Make sure and fill every field  " />
+            <Label alignment="TOP_LEFT" layoutX="350.0" layoutY="292.0" prefHeight="51.0" prefWidth="333.0" text="&gt;Price must have decimal" />
+            <Label alignment="TOP_LEFT" layoutX="350.0" layoutY="335.0" prefHeight="51.0" prefWidth="333.0" text="--ex. 10 (dont do this)..." />
+            <Label alignment="TOP_LEFT" layoutX="350.0" layoutY="433.0" prefHeight="51.0" prefWidth="333.0" text="&gt;Amount in respect to containers" />
+            <Label alignment="TOP_LEFT" layoutX="350.0" layoutY="482.0" prefHeight="51.0" prefWidth="333.0" text="&gt;CLICK ADD ONCE!!!!!!!" textFill="#d30303" />
+            <Label alignment="TOP_LEFT" layoutX="350.0" layoutY="382.0" prefHeight="51.0" prefWidth="333.0" text="--10.00 is acceptable" />
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#232425" height="5.0" layoutX="347.0" layoutY="573.0" stroke="BLACK" strokeType="INSIDE" width="349.0" />
+            <TextField fx:id="changePriceField" layoutX="368.0" layoutY="605.0" prefHeight="51.0" prefWidth="155.0" />
+            <TextField fx:id="changeAmountField" layoutX="368.0" layoutY="685.0" prefHeight="51.0" prefWidth="91.0" />
+            <Label layoutX="368.0" layoutY="656.0" text="Add Amount:" />
+            <Label layoutX="368.0" layoutY="578.0" text="Change Price:" />
+            <Button layoutX="554.0" layoutY="605.0" mnemonicParsing="false" onAction="#changeItemPrice" prefHeight="51.0" prefWidth="115.0" text="Change" />
+            <Button layoutX="554.0" layoutY="675.0" mnemonicParsing="false" onAction="#increaseAmount" prefHeight="51.0" prefWidth="113.0" text="Add" />
+            <Button layoutX="555.0" layoutY="736.0" mnemonicParsing="false" onAction="#decreaseAmount" prefHeight="51.0" prefWidth="113.0" text="Delete" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <TableView fx:id="inventoryTable" layoutX="119.0" layoutY="99.0" prefHeight="398.0" prefWidth="414.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="name" prefWidth="147.0" text="Name" />
+                <TableColumn fx:id="type" prefWidth="161.0" text="Type" />
+                  <TableColumn fx:id="price" prefWidth="209.0" text="Price" />
+                  <TableColumn fx:id="amount" prefWidth="166.0" text="Amount" />
+              </columns>
+            </TableView>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

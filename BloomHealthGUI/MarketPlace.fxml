@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="838.0" prefWidth="375.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.MarketPlace">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ffce1f95" height="837.0" layoutX="1.0" stroke="BLACK" strokeType="INSIDE" width="373.0" />
+      <TextField fx:id="filteredSearch" layoutX="17.0" layoutY="77.0" prefHeight="66.0" prefWidth="204.0" />
+      <Label layoutX="16.0" layoutY="52.0" text="Find Item:">
+         <font>
+            <Font name="Century Schoolbook" size="24.0" />
+         </font></Label>
+      <Button layoutX="233.0" layoutY="18.0" mnemonicParsing="false" onAction="#sellItem" prefHeight="51.0" prefWidth="130.0" text="Sell Item" />
+      <TableView fx:id="inventoryList" layoutX="14.0" layoutY="151.0" prefHeight="438.0" prefWidth="346.0">
+        <columns>
+          <TableColumn fx:id="item" prefWidth="129.0" text="Item" />
+          <TableColumn fx:id="price" prefWidth="106.0" text="Price" />
+            <TableColumn fx:id="amount" prefWidth="107.0" text="Amount" />
+        </columns>
+      </TableView>
+      <Button layoutX="233.0" layoutY="84.0" mnemonicParsing="false" onAction="#refresh" prefHeight="51.0" prefWidth="130.0" text="Refresh" />
+      <TextField fx:id="nameField" layoutX="9.0" layoutY="660.0" prefHeight="51.0" prefWidth="214.0" />
+      <Label layoutX="19.0" layoutY="589.0" text="Case that a Client adds sessions" />
+      <Label layoutX="9.0" layoutY="625.0" text="First and Last Name:" />
+      <Label layoutX="248.0" layoutY="625.0" text="Amount:" />
+      <TextField fx:id="amountField" layoutX="248.0" layoutY="652.0" prefHeight="51.0" prefWidth="91.0" />
+      <RadioButton fx:id="weekly" layoutX="7.0" layoutY="711.0" mnemonicParsing="false" text="Weekly" />
+      <RadioButton fx:id="monthly" layoutX="7.0" layoutY="746.0" mnemonicParsing="false" text="Monthly" />
+      <RadioButton fx:id="paidInFull" layoutX="7.0" layoutY="782.0" mnemonicParsing="false" text="Paid in Full" />
+      <Label layoutX="190.0" layoutY="719.0" text="Price:" />
+      <TextField fx:id="priceField" layoutX="248.0" layoutY="711.0" prefHeight="51.0" prefWidth="91.0" />
+      <Button layoutX="241.0" layoutY="774.0" mnemonicParsing="false" onAction="#sellSession" text="Accept" />
+      <Label layoutX="14.0" layoutY="7.0" prefHeight="35.0" prefWidth="204.0" text="Marketplace">
+         <font>
+            <Font name="Century Schoolbook Bold" size="26.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

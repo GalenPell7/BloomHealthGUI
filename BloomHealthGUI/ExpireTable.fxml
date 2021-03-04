@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.8235294117647058" orientation="VERTICAL" prefHeight="478.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.ExpireTable">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <TableView fx:id="expireList" editable="true" fixedCellSize="24.0" prefHeight="532.0" prefWidth="440.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+              <columns>
+                <TableColumn fx:id="FirstNames" minWidth="-1.0" prefWidth="90.0" text="First Name" />
+                <TableColumn fx:id="LastNames" prefWidth="122.0" text="Last Name" />
+                  <TableColumn fx:id="PhoneNumbers" prefWidth="141.0" text="Phone Number" />
+                  <TableColumn fx:id="EndDates" prefWidth="88.0" text="Expire Date" />
+              </columns>
+               <effect>
+                  <Blend />
+               </effect>
+            </TableView>
+         </children>
+      </AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="141.0" prefWidth="440.0">
+         <children>
+            <Button layoutX="317.0" layoutY="330.0" mnemonicParsing="false" onAction="#renewClient" prefHeight="110.0" prefWidth="103.0" text="Renew" />
+            <Button layoutX="249.0" layoutY="70.0" mnemonicParsing="false" onAction="#sendToExpire" text="Send To Expire" />
+            <TextField fx:id="sessionAmountField" layoutX="14.0" layoutY="232.0" prefHeight="51.0" prefWidth="85.0" />
+            <TextField fx:id="trainerField" layoutX="13.0" layoutY="304.0" prefHeight="51.0" prefWidth="85.0" />
+            <TextField fx:id="planField" layoutX="14.0" layoutY="86.0" prefHeight="51.0" prefWidth="85.0" />
+            <RadioButton fx:id="weeks" layoutX="111.0" layoutY="83.0" mnemonicParsing="false" text="Week(s)" />
+            <RadioButton fx:id="months" layoutX="111.0" layoutY="121.0" mnemonicParsing="false" text="Month(s)" />
+            <Label layoutX="109.0" layoutY="164.0" text=": Price" />
+            <Label layoutX="109.0" layoutY="240.0" text=": Sessions" />
+            <Button layoutX="249.0" layoutY="8.0" mnemonicParsing="false" onAction="#refresh" text="Refresh" />
+            <Label layoutX="106.0" layoutY="312.0" text=": Trainer" />
+            <TextField fx:id="planPriceField" layoutX="13.0" layoutY="156.0" prefHeight="51.0" prefWidth="85.0" text="0.0" />
+            <TextField fx:id="sessionPriceField" layoutX="13.0" layoutY="386.0" prefHeight="51.0" prefWidth="85.0" />
+            <Label layoutX="106.0" layoutY="395.0" text=": Session Price" />
+            <CheckBox fx:id="noSessions" layoutX="249.0" layoutY="122.0" mnemonicParsing="false" text="No Sessions" />
+            <Label fx:id="label" layoutX="198.0" layoutY="148.0" prefHeight="168.0" prefWidth="239.0" />
+            <TextField fx:id="filteredSearch" layoutX="13.0" layoutY="14.0" prefHeight="51.0" prefWidth="149.0" />
+            <Button layoutX="248.0" layoutY="37.0" mnemonicParsing="false" onAction="#clientInfo" text="Client Info" />
+         </children>
+      </AnchorPane>
+  </items>
+</SplitPane>

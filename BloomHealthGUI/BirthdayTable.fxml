@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="308.0" prefWidth="437.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="BloomHealthGUI.BirthdayTable">
+   <children>
+      <TableView fx:id="birthdayList" layoutX="207.0" layoutY="24.0" prefHeight="308.0" prefWidth="443.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-6.0" AnchorPane.topAnchor="0.0">
+        <columns>
+          <TableColumn fx:id="firstNames" prefWidth="139.0" text="FirstName" />
+          <TableColumn fx:id="lastNames" prefWidth="168.0" text="LastName" />
+            <TableColumn fx:id="phoneNumbers" prefWidth="138.0" text="PhoneNumber" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
